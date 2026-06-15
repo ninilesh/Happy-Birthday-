@@ -1,52 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
-            color: white;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 50px 20px;
-            margin: 0;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            display: inline-block;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            animation: bounce 2s infinite;
-        }
-        p {
-            font-size: 1.5rem;
-        }
-        .wishes {
-            font-style: italic;
-            margin: 20px 0;
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Chinu ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ffd6e7,#ffe9f3,#fff5f8);
+    overflow-x:hidden;
+    text-align:center;
+}
+
+.container{
+    padding:30px;
+}
+
+h1{
+    font-size:3rem;
+    color:#ff1493;
+    margin-top:20px;
+}
+
+h2{
+    color:#ff4fa3;
+    margin:15px 0;
+}
+
+.card{
+    max-width:900px;
+    margin:25px auto;
+    background:white;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero-img{
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+.message{
+    font-size:1.2rem;
+    line-height:1.8;
+    color:#555;
+}
+
+.highlight{
+    color:#ff1493;
+    font-weight:bold;
+}
+
+.memory{
+    font-size:1.1rem;
+    color:#666;
+    margin-top:15px;
+}
+
+.footer{
+    margin:40px 0;
+    color:#777;
+    font-weight:bold;
+}
+
+/* Floating Hearts */
+
+.heart{
+    position:fixed;
+    color:pink;
+    animation:float 8s linear infinite;
+    font-size:25px;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+/* Balloon */
+
+.balloon{
+    position:fixed;
+    bottom:-100px;
+    width:60px;
+    height:80px;
+    border-radius:50%;
+    animation:rise 12s linear infinite;
+}
+
+.balloon:before{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:70px;
+    background:#555;
+    left:50%;
+    top:80px;
+}
+
+@keyframes rise{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+button{
+    background:#ff1493;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:1rem;
+    margin-top:20px;
+}
+
+button:hover{
+    background:#ff4fa3;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <!-- Yahan Balloons ya Cake ki emoji daal sakte ho -->
-        <div style="font-size: 50px;">🎂🎈🎉</div>
-        <h1>Happy Birthday, jyoti kanojia ! 🎉</h1>
-        <p class="wishes">"🎂 Happy Birthday, chinu ! May this year bring you happiness, success, and endless smiles. Have an amazing day! 🎉✨"</p>
-        <p>Best Wishes From: <strong>nilesh raikwar</strong></p>
+<!-- Music -->
+<audio id="music" loop>
+    <!-- Yaha apni mp3 file ka link lagao -->
+    <source src="birthday-song.mp3" type="audio/mp3">
+</audio>
+
+<div class="container">
+
+    <h1>🎂 Happy Birthday Chinu 🎂</h1>
+
+    <h2>Dear Jyoti Kanojia ❤️</h2>
+
+    <button onclick="playMusic()">🎵 Play Music</button>
+
+    <div class="card">
+
+        <img class="hero-img"
+        src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1000&q=80"
+        alt="Childhood Friends">
+
+        <h2>From Your Childhood Friend</h2>
+
+        <p class="message">
+            Wish you a very Happy Birthday,
+            <span class="highlight">my dear Chuiya ❤️</span>
+            <br><br>
+
+            Jyoti, yaani hamari pyari Chinu,
+            aaj tumhare special day par main bas itna kehna chahta hoon ki
+            tum hamesha khush raho, haste raho aur apni life me bahut aage badho.
+
+            <br><br>
+
+            Bachpan se lekar aaj tak ki yaadein bhale hi kam ho,
+            lekin jo yaadein hain woh bahut special hain.
+            Tumhari dosti meri life ka ek pyara hissa hai.
+        </p>
     </div>
+
+    <div class="card">
+        <h2>✨ Special Memory ✨</h2>
+
+        <p class="memory">
+            Ganesh Ji ka Mandap,
+            woh din, woh hasi-mazaak,
+            aur saath bitaye hue kuch khoobsurat pal...
+            Shayad memories zyada nahi hain,
+            lekin jo hain woh dil ke bahut kareeb hain. ❤️
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>💖 Birthday Wishes 💖</h2>
+
+        <p class="message">
+            May your life be filled with happiness,
+            success, good health and endless smiles.
+
+            <br><br>
+
+            Stay cute, stay amazing,
+            and keep spreading positivity everywhere.
+
+            <br><br>
+
+            Once Again...
+            <br>
+            <span class="highlight">
+                Happy Birthday Chinu 🎂🎉🎈
+            </span>
+        </p>
+    </div>
+
+    <div class="footer">
+        Made with ❤️ by Dinosaur 🦖
+    </div>
+
+</div>
+
+<script>
+function playMusic(){
+    document.getElementById("music").play();
+}
+
+/* Hearts */
+
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="💖";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(20+Math.random()*25)+"px";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+}
+
+setInterval(createHeart,500);
+
+/* Balloons */
+
+const colors=["#ff69b4","#ff1493","#ffb6c1","#ff7eb3","#ff4d88"];
+
+for(let i=0;i<15;i++){
+    let balloon=document.createElement("div");
+    balloon.classList.add("balloon");
+
+    balloon.style.left=Math.random()*100+"vw";
+    balloon.style.background=
+    colors[Math.floor(Math.random()*colors.length)];
+
+    balloon.style.animationDuration=
+    (8+Math.random()*8)+"s";
+
+    document.body.appendChild(balloon);
+}
+</script>
 
 </body>
 </html>
